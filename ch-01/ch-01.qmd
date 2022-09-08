@@ -1,0 +1,18 @@
+---
+title: "R4DS Chapter 1"
+author: "Jared Harris"
+format: gfm
+output-file: README.md
+editor: visual
+---
+
+## Quarto
+
+Here's a plot:
+
+```{r}
+library(ggplot2)
+
+ggplot(diamonds, aes(price, carat)) +
+  geom_point()
+```
