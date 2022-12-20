@@ -1,10 +1,10 @@
-R4DS Chapter 1
-================
+# R4DS Chapter 1
+
 Jared Harris
 
 ## Quarto
 
-Here’s a plot:
+Here's a plot:
 
 ``` r
 library(ggplot2)

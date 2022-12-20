@@ -1,3 +1,7 @@
+# R for data science ####
+# Chapter 3.1: Data Visualisation ####
+
+
 install.packages("tidyverse")
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
@@ -21,6 +25,8 @@ library(tidyverse)
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 
+# Chapter 3.2 ####
+
 # Do cars with big engines use more fuel than cars with small engines?
 
 ggplot2::mpg
@@ -31,6 +37,8 @@ ggplot(data = mpg) +
 # Grpahing template
 # ggplot(data = <DATA>) + 
 #  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+
+# Chapter 3.3-4 ####
 
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = hwy, y = cyl))
@@ -60,6 +68,8 @@ ggplot(data = mpg) +
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, stroke = 5, colour = displ <5))
 
+# Chapter 3.5 ####
+
 # Facets # 
 
 ggplot(data = mpg) + 
@@ -86,3 +96,18 @@ ggplot(data = mpg) +
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   facet_wrap(~ class, nrow = 2)
+
+# Chapter 3.6 ####
+
+# left
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+# right
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))
+
+
